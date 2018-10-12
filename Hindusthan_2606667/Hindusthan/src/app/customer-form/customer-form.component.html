@@ -1,0 +1,57 @@
+<form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+    <p>
+        <label>Title:</label>
+        <select name="cus-title" [(ngModel)]="cus.title">
+           <option value="Mr.">Mr</option>
+           <option  value="Mrs.">Mrs</option>
+           <option  value="Miss.">Miss</option>
+           <option  value="Dr.">Dr</option>
+           <option value="Prof.">Prof</option>
+         </select>
+
+    </p>
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" name="firstName" [(ngModel)]="cus.fname" #firstName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required />
+        <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback">
+            <div *ngIf="firstName.errors.required">First Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" name="lastName" [(ngModel)]="cus.lname" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+        <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+            <div *ngIf="lastName.errors.required">Last Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Number">Primary Mobile Number</label>
+        <input type="number" class="form-control" name="primary" [(ngModel)]="cus.primMob" #primary="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required minlength="10" maxlength="10" />
+        <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+            <div *ngIf="lastName.errors.required">10 digits required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Number">Alternate Mobile Nmuber</label>
+        <input type="number" class="form-control" name="alternate" [(ngModel)]="cus.altMob" #alternate="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" minlength="10" maxlength="10" />
+        <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+            <div *ngIf="lastName.errors.required">10 digits required</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Email Id:</label>
+        <input type="text" class="form-control" name="email" [(ngModel)]="cus.mailId" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email />
+        <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+            <div *ngIf="email.errors.required">Email is required</div>
+            <div *ngIf="email.errors.email">Email must be a valid email address</div>
+        </div>
+    </div>
+    <p><label>Gender:</label>
+        <input type="text " name="cus-gender " [(ngModel)]="cus.gender " required />
+    </p>
+    <div class="form-group">
+        <button>Register</button>
+        <button type="button " (click)="cancel() ">Cancel</button>
+    </div>
+</form>

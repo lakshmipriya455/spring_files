@@ -1,0 +1,98 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    margin: 5px;
+    padding: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 130px;
+    font-size: 18px;
+    background-color: lightpink;
+    text-align: center;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+a:hover {
+    background: lightcoral;
+}
+
+header,
+footer {
+    min-height: 40px;
+    background: lightcoral;
+    color: white;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 0px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    font-size: 35px;
+}
+
+footer {
+    margin-top: 0px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+nav {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    min-height: 50px;
+    background-color: lightblue;
+    color: white;
+}
+
+main {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    min-height: 250px;
+    background-color: white;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    background: bisque;
+    border-radius: 4px;
+    font-weight: bolder;
+}
+
+table {
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th {
+    background: lightblue;
+    font-size: 20px;
+}
+
+tr:nth-child(odd) {
+    background: white;
+}
+
+tr:nth-child(even) {
+    background: lightgrey;
+}
+
+.btns {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: rgb(221, 85, 92);
+    color: white;
+    border-radius: 5px;
+}
+
+.disp {
+    background: rgb(221, 85, 92);
+    width: 200px;
+    border-radius: 10px;
+}
